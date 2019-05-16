@@ -8,6 +8,8 @@
 #include <string>
 #include <utility>
 
+#include <boost/filesystem.hpp>
+
 #include "config/config.h"
 #include "http/httpclient.h"
 #include "logging/logging.h"
@@ -102,7 +104,11 @@ TEST_P(UptaneVector, Test) {
   Uptane::Target target("test_filename", {{Uptane::Hash::Type::kSha256, "sha256"}}, 1, "");
   storage->saveInstalledVersion(ecu_serial.ToString(), target, InstalledVersionUpdateMode::kCurrent);
 
+  const boost::filesystem::path db_file = config.storage.sqldb_path.get(config.storage.path);
+  const boost::filesystem::path old_db_file = config.storage.path / "before.db";
+
   HttpClient http_client;
+
   while (true) {
     HttpResponse response = http_client.post(address + test_name + "/step", Json::Value());
     if (response.http_status_code == 204) {
@@ -113,6 +119,10 @@ TEST_P(UptaneVector, Test) {
     VectorWrapper vector(vector_json);
 
     bool should_fail = vector.shouldFail();
+
+    if (should_fail) {
+      boost::filesystem::copy(db_file, old_db_file);
+    }
 
     try {
       /* Fetch metadata from the director.
@@ -138,7 +148,11 @@ TEST_P(UptaneVector, Test) {
       }
 
     } catch (const Uptane::Exception& e) {
+      ASSERT_TRUE(should_fail);
       ASSERT_TRUE(vector.matchError(e)) << "libaktualizr threw a different exception than expected!";
+      std::string out;
+      Utils::shell(std::string("sqldiff ") + old_db_file.string() + " " + db_file.string(), &out, true);
+      EXPECT_EQ(out, "");
       continue;
     } catch (const std::exception& e) {
       FAIL() << "libaktualizr failed with unrecognized exception " << typeid(e).name() << ": " << e.what();
