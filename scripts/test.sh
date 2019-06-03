@@ -9,9 +9,11 @@ TRAVIS_COMMIT=${TRAVIS_COMMIT:-}
 # Test options: test stages, additional checkers, compile options
 TEST_BUILD_DIR=${TEST_BUILD_DIR:-build-test}
 TEST_WITH_STATICTESTS=${TEST_WITH_STATICTESTS:-0}
+TEST_WITH_CONFIGURE=${TEST_WITH_CONFIGURE:-1}
 TEST_WITH_BUILD=${TEST_WITH_BUILD:-1}
 TEST_WITH_INSTALL_DEB_PACKAGES=${TEST_WITH_INSTALL_DEB_PACKAGES:-0}
 TEST_WITH_TESTSUITE=${TEST_WITH_TESTSUITE:-1}
+TEST_WITH_BUILD_TESTSUITE=${TEST_WITH_BUILD_TESTSUITE:-$TEST_WITH_TESTSUITE}
 
 TEST_WITH_COVERAGE=${TEST_WITH_COVERAGE:-0}
 TEST_WITH_SOTA_TOOLS=${TEST_WITH_SOTA_TOOLS:-1}
@@ -106,17 +108,19 @@ if [[ $TEST_WITH_P11 = 1 ]]; then
 fi
 
 echo ">> Running CMake"
-if [[ $TEST_DRYRUN != 1 ]]; then
-    (
-    if [[ $TEST_CC = gcc ]]; then
-        export CC=gcc CXX=g++
-    elif [[ $TEST_CC = clang ]]; then
-        export CC=clang CXX=clang++
-    fi
+if [[ $TEST_WITH_CONFIGURE = 1 ]]; then
+    if [[ $TEST_DRYRUN != 1 ]]; then
+        (
+        if [[ $TEST_CC = gcc ]]; then
+            export CC=gcc CXX=g++
+        elif [[ $TEST_CC = clang ]]; then
+            export CC=clang CXX=clang++
+        fi
 
-    set -x
-    cmake "${CMAKE_ARGS[@]}" "${GITREPO_ROOT}" || add_fatal_failure "cmake configure"
-    )
+        set -x
+        cmake "${CMAKE_ARGS[@]}" "${GITREPO_ROOT}" || add_fatal_failure "cmake configure"
+        )
+    fi
 fi
 
 if [[ $TEST_WITH_STATICTESTS = 1 ]]; then
@@ -134,6 +138,10 @@ if [[ $TEST_WITH_BUILD = 1 ]]; then
     if [[ $TEST_DRYRUN != 1 ]]; then
         set -x
         run_make || add_fatal_failure "make"
+
+        if [[ $TEST_WITH_BUILD_TESTSUITE = 1 ]]; then
+            run_make build_tests || add_fatal_failure "make"
+        fi
 
         # Check that 'make install' works
         DESTDIR=/tmp/aktualizr run_make install || add_failure "make install"

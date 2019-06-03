@@ -104,23 +104,42 @@ debian-build:
   script:
     - ./scripts/test.sh
 
+coverage-build:
+  variables:
+    TEST_BUILD_DIR: 'build-coverage'
+    TEST_CMAKE_BUILD_TYPE: 'Valgrind'
+    TEST_WITH_TESTSUITE: '0'
+    TEST_WITH_BUILD_TESTSUITE: '1'
+    TEST_WITH_COVERAGE: '1'
+    TEST_WITH_P11: '1'
+    TEST_WITH_FAULT_INJECTION: '1'
+    TEST_SOTA_PACKED_CREDENTIALS: "$CI_PROJECT_DIR/build-coverage/credentials.zip"
+
+  image: "$UBUNTU_BIONIC_PR_IMAGE"
+  stage: build
+  artifacts:
+    paths:
+      - build-coverage
+  script:
+    - aws s3 cp s3://ota-gitlab-ci/hereotaconnect_prod.zip build-coverage/credentials.zip
+    - ./scripts/test.sh
+
 # test stages
 
 coverage:
   variables:
     TEST_BUILD_DIR: 'build-coverage'
     TEST_CMAKE_BUILD_TYPE: 'Valgrind'
+    TEST_WITH_CONFIGURE: '0'
+    TEST_WITH_BUILD: '0'
     TEST_WITH_COVERAGE: '1'
-    TEST_WITH_P11: '1'
-    TEST_WITH_FAULT_INJECTION: '1'
-    TEST_SOTA_PACKED_CREDENTIALS: "$CI_PROJECT_DIR/build-coverage/credentials.zip"
+
   image: "$UBUNTU_BIONIC_PR_IMAGE"
   stage: test
   artifacts:
     paths:
       - build-coverage/coverage/
   script:
-    - aws s3 cp s3://ota-gitlab-ci/hereotaconnect_prod.zip build-coverage/credentials.zip
     - ./scripts/test.sh
 
 static-checks:
