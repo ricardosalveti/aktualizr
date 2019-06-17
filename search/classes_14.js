@@ -8,6 +8,7 @@ var searchData=
   ['uptanekey_5fcheck_5ftest',['UptaneKey_Check_Test',['../class_uptane_key___check___test.html',1,'']]],
   ['uptanerepo',['UptaneRepo',['../class_uptane_repo.html',1,'']]],
   ['uptanetestcommon',['UptaneTestCommon',['../struct_uptane_test_common.html',1,'']]],
+  ['uptanetestrepo',['UptaneTestRepo',['../classipsecondary__test_1_1_uptane_test_repo.html',1,'ipsecondary_test']]],
   ['uptanevector',['UptaneVector',['../class_uptane_vector.html',1,'']]],
   ['utils',['Utils',['../struct_utils.html',1,'']]]
 ];

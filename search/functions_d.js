@@ -1,9 +1,7 @@
 var searchData=
 [
-  ['tail',['Tail',['../class_dequeue_buffer.html#a3954b3fc4cd5ae6d62f81a50a33c9947',1,'DequeueBuffer']]],
-  ['tailspace',['TailSpace',['../class_dequeue_buffer.html#add0c438f5b2835ae3855beae88a827c2',1,'DequeueBuffer']]],
-  ['test',['TEST',['../uptane__implicit__test_8cc.html#a419e8cd6f606ba3a60db7e73e0903237',1,'TEST(UptaneImplicit, ImplicitFailure):&#160;uptane_implicit_test.cc'],['../uptane__implicit__test_8cc.html#a6e9ec29eaba3307d6a1231c637f1048c',1,'TEST(UptaneImplicit, ImplicitIncomplete):&#160;uptane_implicit_test.cc'],['../uptane__implicit__test_8cc.html#ae965630169deaad6333afe6e6758674c',1,'TEST(UptaneImplicit, ImplicitProvision):&#160;uptane_implicit_test.cc'],['../utils__test_8cc.html#a934e1f2dff9e02fef098d3296bb6f484',1,'TEST(Utils, GenPrettyNameSane):&#160;utils_test.cc']]],
-  ['timestamp',['TimeStamp',['../class_time_stamp.html#a130d6c5230be88ae97c3db1ca9362b97',1,'TimeStamp']]],
-  ['total_5frequests_5fmade',['total_requests_made',['../class_request_pool.html#a974b7007d9648c565e5983da3def1952',1,'RequestPool']]],
-  ['touptane',['ToUptane',['../class_public_key.html#a4baff8ec5e3e2a7acabe7d6cf5b3e3aa',1,'PublicKey']]]
+  ['resume',['Resume',['../class_aktualizr.html#a36fe7a08970e37f855698735a36ef33d',1,'Aktualizr']]],
+  ['root',['Root',['../class_uptane_1_1_root.html#ad04f498695b78bc5d503e0b179f90c85',1,'Uptane::Root::Root(Policy policy=Policy::kRejectAll)'],['../class_uptane_1_1_root.html#ad957ad533c90643dd15a33ca7c5be9ba',1,'Uptane::Root::Root(RepositoryType repo, const Json::Value &amp;json)']]],
+  ['run',['Run',['../class_socket_server.html#a2c0824607722075fbcc8b24137a07409',1,'SocketServer']]],
+  ['runforever',['RunForever',['../class_aktualizr.html#adaf86ad549300e30dbe09ff02f07d697',1,'Aktualizr']]]
 ];

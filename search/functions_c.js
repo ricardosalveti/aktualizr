@@ -1,9 +1,5 @@
 var searchData=
 [
-  ['senddevicedata',['SendDeviceData',['../class_aktualizr.html#a665cd221bdf39c1b6e1e7f292ab5ef8a',1,'Aktualizr']]],
-  ['sendmanifest',['SendManifest',['../class_aktualizr.html#ac8dc8bd2e77fc70241f137e000a52625',1,'Aktualizr']]],
-  ['setabort',['setAbort',['../classapi_1_1_flow_control_token.html#a6841a6ba403e755e410586c96d02ce4a',1,'api::FlowControlToken']]],
-  ['setpause',['setPause',['../classapi_1_1_flow_control_token.html#a891ee41998077ccaf37b52e92623235d',1,'api::FlowControlToken']]],
-  ['setsignalhandler',['SetSignalHandler',['../class_aktualizr.html#a1481a4c4b6b4c9933ce62d40773faf90',1,'Aktualizr']]],
-  ['size',['Size',['../class_dequeue_buffer.html#ae15c5c83bf4b53852f229f8e0ba40034',1,'DequeueBuffer']]]
+  ['parse',['parse',['../classaccumulator__type.html#afd88d087bc73adafeeec19aacbe8c705',1,'accumulator_type::parse()'],['../class_o_s_tree_hash.html#a47dbb95abeeff4fd82a3c03af1d5f3d8',1,'OSTreeHash::Parse()']]],
+  ['pause',['Pause',['../class_aktualizr.html#a600d9c081a25142f25178430870b09c9',1,'Aktualizr']]]
 ];

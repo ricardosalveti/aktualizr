@@ -92,9 +92,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> ()</td
 <tr class="memitem:aaf5a5fd987a9c24514b98a16bc19466f"><td class="memItemLeft" align="right" valign="top">std::future&lt; <a class="el" href="classresult_1_1_campaign_check.html">result::CampaignCheck</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aktualizr.html#aaf5a5fd987a9c24514b98a16bc19466f">CampaignCheck</a> ()</td></tr>
 <tr class="memdesc:aaf5a5fd987a9c24514b98a16bc19466f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check for campaigns.  <a href="#aaf5a5fd987a9c24514b98a16bc19466f">More...</a><br /></td></tr>
 <tr class="separator:aaf5a5fd987a9c24514b98a16bc19466f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ecd4f8af764fe5af9e999e4985da0e0"><td class="memItemLeft" align="right" valign="top">std::future&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aktualizr.html#a1ecd4f8af764fe5af9e999e4985da0e0">CampaignAccept</a> (const std::string &amp;campaign_id)</td></tr>
-<tr class="memdesc:a1ecd4f8af764fe5af9e999e4985da0e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accept a campaign for the current device.  <a href="#a1ecd4f8af764fe5af9e999e4985da0e0">More...</a><br /></td></tr>
-<tr class="separator:a1ecd4f8af764fe5af9e999e4985da0e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73d44f4f2c7236a4779de927ae66f0e6"><td class="memItemLeft" align="right" valign="top">std::future&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aktualizr.html#a73d44f4f2c7236a4779de927ae66f0e6">CampaignControl</a> (const std::string &amp;campaign_id, campaign::Cmd cmd)</td></tr>
+<tr class="memdesc:a73d44f4f2c7236a4779de927ae66f0e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Act on campaign: accept, decline or postpone.  <a href="#a73d44f4f2c7236a4779de927ae66f0e6">More...</a><br /></td></tr>
+<tr class="separator:a73d44f4f2c7236a4779de927ae66f0e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a665cd221bdf39c1b6e1e7f292ab5ef8a"><td class="memItemLeft" align="right" valign="top">std::future&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aktualizr.html#a665cd221bdf39c1b6e1e7f292ab5ef8a">SendDeviceData</a> ()</td></tr>
 <tr class="memdesc:a665cd221bdf39c1b6e1e7f292ab5ef8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send local device data to the server.  <a href="#a665cd221bdf39c1b6e1e7f292ab5ef8a">More...</a><br /></td></tr>
 <tr class="separator:a665cd221bdf39c1b6e1e7f292ab5ef8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -128,9 +128,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> ()</td
 <tr class="memitem:ad433bb3340ec534e1557289f0399e518"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aktualizr.html#ad433bb3340ec534e1557289f0399e518">AddSecondary</a> (const std::shared_ptr&lt; <a class="el" href="class_uptane_1_1_secondary_interface.html">Uptane::SecondaryInterface</a> &gt; &amp;secondary)</td></tr>
 <tr class="memdesc:ad433bb3340ec534e1557289f0399e518"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add new secondary to aktualizr.  <a href="#ad433bb3340ec534e1557289f0399e518">More...</a><br /></td></tr>
 <tr class="separator:ad433bb3340ec534e1557289f0399e518"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1481a4c4b6b4c9933ce62d40773faf90"><td class="memItemLeft" align="right" valign="top">boost::signals2::connection&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aktualizr.html#a1481a4c4b6b4c9933ce62d40773faf90">SetSignalHandler</a> (std::function&lt; void(std::shared_ptr&lt; <a class="el" href="classevent_1_1_base_event.html">event::BaseEvent</a> &gt;)&gt; &amp;handler)</td></tr>
-<tr class="memdesc:a1481a4c4b6b4c9933ce62d40773faf90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide a function to receive event notifications.  <a href="#a1481a4c4b6b4c9933ce62d40773faf90">More...</a><br /></td></tr>
-<tr class="separator:a1481a4c4b6b4c9933ce62d40773faf90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5af2d155c2c78f5c5a75b2b6bfc9e10d"><td class="memItemLeft" align="right" valign="top">boost::signals2::connection&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aktualizr.html#a5af2d155c2c78f5c5a75b2b6bfc9e10d">SetSignalHandler</a> (const std::function&lt; void(std::shared_ptr&lt; <a class="el" href="classevent_1_1_base_event.html">event::BaseEvent</a> &gt;)&gt; &amp;handler)</td></tr>
+<tr class="memdesc:a5af2d155c2c78f5c5a75b2b6bfc9e10d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide a function to receive event notifications.  <a href="#a5af2d155c2c78f5c5a75b2b6bfc9e10d">More...</a><br /></td></tr>
+<tr class="separator:a5af2d155c2c78f5c5a75b2b6bfc9e10d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class provides the main APIs necessary for launching and controlling libaktualizr. </p>
@@ -187,7 +187,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> ()</td
 <p>Aborts the currently running command, if it can be aborted, or waits for it to finish; then removes all other queued calls. </p>
 <p>This doesn't reset the <code>Paused</code> state, i.e. if the queue was previously paused, it will remain paused, but with an emptied queue. The call is blocking. </p>
 
-<p class="definition">Definition at line <a class="el" href="aktualizr_8cc_source.html#l00148">148</a> of file <a class="el" href="aktualizr_8cc_source.html">aktualizr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aktualizr_8cc_source.html#l00162">162</a> of file <a class="el" href="aktualizr_8cc_source.html">aktualizr.cc</a>.</p>
 
 </div>
 </div>
@@ -219,35 +219,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> ()</td
 
 </div>
 </div>
-<a id="a1ecd4f8af764fe5af9e999e4985da0e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ecd4f8af764fe5af9e999e4985da0e0">&#9670;&nbsp;</a></span>CampaignAccept()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::future&lt; void &gt; Aktualizr::CampaignAccept </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>campaign_id</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Accept a campaign for the current device. </p>
-<p>Campaigns are a concept outside of <a class="el" href="namespace_uptane.html" title="Base data types that are used in The Update Framework (TUF), part of UPTANE. ">Uptane</a>, and allow for user approval of updates before the contents of the update are known. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">campaign_id</td><td>Campaign ID as provided by CampaignCheck. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Empty std::future object </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="aktualizr_8cc_source.html#l00099">99</a> of file <a class="el" href="aktualizr_8cc_source.html">aktualizr.cc</a>.</p>
-
-</div>
-</div>
 <a id="aaf5a5fd987a9c24514b98a16bc19466f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaf5a5fd987a9c24514b98a16bc19466f">&#9670;&nbsp;</a></span>CampaignCheck()</h2>
 
@@ -270,6 +241,46 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> ()</td
 
 </div>
 </div>
+<a id="a73d44f4f2c7236a4779de927ae66f0e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73d44f4f2c7236a4779de927ae66f0e6">&#9670;&nbsp;</a></span>CampaignControl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::future&lt; void &gt; Aktualizr::CampaignControl </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>campaign_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">campaign::Cmd&#160;</td>
+          <td class="paramname"><em>cmd</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Act on campaign: accept, decline or postpone. </p>
+<p>Accepted campaign will be removed from the campaign list but no guarantee is made for declined or postponed items. Applications are responsible for tracking their state but this method will notify the server for device state monitoring purposes. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">campaign_id</td><td>Campaign ID as provided by CampaignCheck. </td></tr>
+    <tr><td class="paramname">cmd</td><td>action to apply on the campaign: accept, decline or postpone </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Empty std::future object </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="aktualizr_8cc_source.html#l00099">99</a> of file <a class="el" href="aktualizr_8cc_source.html">aktualizr.cc</a>.</p>
+
+</div>
+</div>
 <a id="adf876d93967a1dc30a362f5482693405"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adf876d93967a1dc30a362f5482693405">&#9670;&nbsp;</a></span>CheckUpdates()</h2>
 
@@ -288,7 +299,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> ()</td
 <p>Fetch <a class="el" href="namespace_uptane.html" title="Base data types that are used in The Update Framework (TUF), part of UPTANE. ">Uptane</a> metadata and check for updates. </p>
 <p>This collects a client manifest, PUTs it to the director, updates the <a class="el" href="namespace_uptane.html" title="Base data types that are used in The Update Framework (TUF), part of UPTANE. ">Uptane</a> metadata (including root and targets), and then checks the metadata for target updates. </p><dl class="section return"><dt>Returns</dt><dd>Information about available updates. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aktualizr_8cc_source.html#l00109">109</a> of file <a class="el" href="aktualizr_8cc_source.html">aktualizr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aktualizr_8cc_source.html#l00123">123</a> of file <a class="el" href="aktualizr_8cc_source.html">aktualizr.cc</a>.</p>
 
 </div>
 </div>
@@ -317,7 +328,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> ()</td
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::future object with information about download results. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aktualizr_8cc_source.html#l00114">114</a> of file <a class="el" href="aktualizr_8cc_source.html">aktualizr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aktualizr_8cc_source.html#l00128">128</a> of file <a class="el" href="aktualizr_8cc_source.html">aktualizr.cc</a>.</p>
 
 </div>
 </div>
@@ -346,7 +357,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> ()</td
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Handle to the stored binary. nullptr if none is found. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aktualizr_8cc_source.html#l00154">154</a> of file <a class="el" href="aktualizr_8cc_source.html">aktualizr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aktualizr_8cc_source.html#l00169">169</a> of file <a class="el" href="aktualizr_8cc_source.html">aktualizr.cc</a>.</p>
 
 </div>
 </div>
@@ -375,7 +386,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> ()</td
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::future object with information about installation results. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aktualizr_8cc_source.html#l00120">120</a> of file <a class="el" href="aktualizr_8cc_source.html">aktualizr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aktualizr_8cc_source.html#l00134">134</a> of file <a class="el" href="aktualizr_8cc_source.html">aktualizr.cc</a>.</p>
 
 </div>
 </div>
@@ -398,7 +409,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> ()</td
 <p>In progress target downloads will be paused and API calls will be deferred.</p>
 <dl class="section return"><dt>Returns</dt><dd>Information about pause results. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aktualizr_8cc_source.html#l00130">130</a> of file <a class="el" href="aktualizr_8cc_source.html">aktualizr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aktualizr_8cc_source.html#l00144">144</a> of file <a class="el" href="aktualizr_8cc_source.html">aktualizr.cc</a>.</p>
 
 </div>
 </div>
@@ -421,7 +432,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> ()</td
 <p>Target downloads will resume and API calls issued during the pause will execute in fifo order.</p>
 <dl class="section return"><dt>Returns</dt><dd>Information about resume results. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aktualizr_8cc_source.html#l00139">139</a> of file <a class="el" href="aktualizr_8cc_source.html">aktualizr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aktualizr_8cc_source.html#l00153">153</a> of file <a class="el" href="aktualizr_8cc_source.html">aktualizr.cc</a>.</p>
 
 </div>
 </div>
@@ -465,7 +476,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> ()</td
 <p>Send local device data to the server. </p>
 <p>This includes network status, installed packages, hardware etc. </p><dl class="section return"><dt>Returns</dt><dd>Empty std::future object </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aktualizr_8cc_source.html#l00104">104</a> of file <a class="el" href="aktualizr_8cc_source.html">aktualizr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aktualizr_8cc_source.html#l00118">118</a> of file <a class="el" href="aktualizr_8cc_source.html">aktualizr.cc</a>.</p>
 
 </div>
 </div>
@@ -495,12 +506,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> ()</td
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::future object with manifest update result (true on success). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aktualizr_8cc_source.html#l00125">125</a> of file <a class="el" href="aktualizr_8cc_source.html">aktualizr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aktualizr_8cc_source.html#l00139">139</a> of file <a class="el" href="aktualizr_8cc_source.html">aktualizr.cc</a>.</p>
 
 </div>
 </div>
-<a id="a1481a4c4b6b4c9933ce62d40773faf90"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1481a4c4b6b4c9933ce62d40773faf90">&#9670;&nbsp;</a></span>SetSignalHandler()</h2>
+<a id="a5af2d155c2c78f5c5a75b2b6bfc9e10d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5af2d155c2c78f5c5a75b2b6bfc9e10d">&#9670;&nbsp;</a></span>SetSignalHandler()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -508,7 +519,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> ()</td
         <tr>
           <td class="memname">boost::signals2::connection Aktualizr::SetSignalHandler </td>
           <td>(</td>
-          <td class="paramtype">std::function&lt; void(std::shared_ptr&lt; <a class="el" href="classevent_1_1_base_event.html">event::BaseEvent</a> &gt;)&gt; &amp;&#160;</td>
+          <td class="paramtype">const std::function&lt; void(std::shared_ptr&lt; <a class="el" href="classevent_1_1_base_event.html">event::BaseEvent</a> &gt;)&gt; &amp;&#160;</td>
           <td class="paramname"><em>handler</em></td><td>)</td>
           <td></td>
         </tr>
@@ -524,7 +535,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> ()</td
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a signal connection object, which can be disconnected if desired. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="aktualizr_8cc_source.html#l00150">150</a> of file <a class="el" href="aktualizr_8cc_source.html">aktualizr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aktualizr_8cc_source.html#l00164">164</a> of file <a class="el" href="aktualizr_8cc_source.html">aktualizr.cc</a>.</p>
 
 </div>
 </div>

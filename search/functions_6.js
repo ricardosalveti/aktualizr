@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['loop',['Loop',['../class_request_pool.html#a0ccb0fadde5bd62a2bec10a53d31f6b5',1,'RequestPool']]]
+  ['haveenqueued',['HaveEnqueued',['../class_dequeue_buffer.html#a92f691d138875540907baf8ebf619633',1,'DequeueBuffer']]],
+  ['head',['Head',['../class_dequeue_buffer.html#a7d9007c3e6619e0032eed9f005a64d0c',1,'DequeueBuffer']]]
 ];
