@@ -62,18 +62,25 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="class_sota_uptane_client-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">SotaUptaneClient Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for SotaUptaneClient:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_sota_uptane_client__inherit__graph.svg" width="230" height="127"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5dda4421e3a09f2d42cd933b194a0de9"><td class="memItemLeft" align="right" valign="top"><a id="a5dda4421e3a09f2d42cd933b194a0de9"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>SotaUptaneClient</b> (<a class="el" href="class_config.html">Config</a> &amp;config_in, std::shared_ptr&lt; <a class="el" href="class_i_nv_storage.html">INvStorage</a> &gt; storage_in, std::shared_ptr&lt; <a class="el" href="class_http_interface.html">HttpInterface</a> &gt; http_client, std::shared_ptr&lt; <a class="el" href="class_bootloader.html">Bootloader</a> &gt; bootloader_in, std::shared_ptr&lt; <a class="el" href="class_report_queue.html">ReportQueue</a> &gt; report_queue_in, std::shared_ptr&lt; event::Channel &gt; events_channel_in=nullptr)</td></tr>
-<tr class="separator:a5dda4421e3a09f2d42cd933b194a0de9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88608b91afa23eceef94468b4e5bc866"><td class="memItemLeft" align="right" valign="top"><a id="a88608b91afa23eceef94468b4e5bc866"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>SotaUptaneClient</b> (<a class="el" href="class_config.html">Config</a> &amp;config_in, const std::shared_ptr&lt; <a class="el" href="class_i_nv_storage.html">INvStorage</a> &gt; &amp;storage_in, std::shared_ptr&lt; <a class="el" href="class_http_interface.html">HttpInterface</a> &gt; http_client, std::shared_ptr&lt; <a class="el" href="class_bootloader.html">Bootloader</a> &gt; bootloader_in, std::shared_ptr&lt; <a class="el" href="class_report_queue.html">ReportQueue</a> &gt; report_queue_in, std::shared_ptr&lt; event::Channel &gt; events_channel_in=nullptr)</td></tr>
+<tr class="separator:a88608b91afa23eceef94468b4e5bc866"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6bfba6e151c051a7e8bad947e3c96d0d"><td class="memItemLeft" align="right" valign="top"><a id="a6bfba6e151c051a7e8bad947e3c96d0d"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>initialize</b> ()</td></tr>
 <tr class="separator:a6bfba6e151c051a7e8bad947e3c96d0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -143,9 +150,12 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a77675eeb4acf67f5bf0ae081e79c047a"><td class="memItemLeft" align="right" valign="top"><a id="a77675eeb4acf67f5bf0ae081e79c047a"></a>
 static std::shared_ptr&lt; <a class="el" href="class_sota_uptane_client.html">SotaUptaneClient</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>newDefaultClient</b> (<a class="el" href="class_config.html">Config</a> &amp;config_in, std::shared_ptr&lt; <a class="el" href="class_i_nv_storage.html">INvStorage</a> &gt; storage_in, std::shared_ptr&lt; event::Channel &gt; events_channel_in=nullptr)</td></tr>
 <tr class="separator:a77675eeb4acf67f5bf0ae081e79c047a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a016ef34a6cae665dc88b92af06197466"><td class="memItemLeft" align="right" valign="top"><a id="a016ef34a6cae665dc88b92af06197466"></a>
-static std::shared_ptr&lt; <a class="el" href="class_sota_uptane_client.html">SotaUptaneClient</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>newTestClient</b> (<a class="el" href="class_config.html">Config</a> &amp;config_in, std::shared_ptr&lt; <a class="el" href="class_i_nv_storage.html">INvStorage</a> &gt; storage_in, std::shared_ptr&lt; <a class="el" href="class_http_interface.html">HttpInterface</a> &gt; http_client_in, std::shared_ptr&lt; event::Channel &gt; events_channel_in=nullptr)</td></tr>
-<tr class="separator:a016ef34a6cae665dc88b92af06197466"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a2ca74092904232684da74bd8af369782"><td class="memItemLeft" align="right" valign="top"><a id="a2ca74092904232684da74bd8af369782"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addSecondary</b> (const std::shared_ptr&lt; <a class="el" href="class_uptane_1_1_secondary_interface.html">Uptane::SecondaryInterface</a> &gt; &amp;sec)</td></tr>
+<tr class="separator:a2ca74092904232684da74bd8af369782"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>

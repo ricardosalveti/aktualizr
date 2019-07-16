@@ -2,9 +2,8 @@ var searchData=
 [
   ['safetemproot',['SafeTempRoot',['../class_safe_temp_root.html',1,'']]],
   ['secondaryadapter',['SecondaryAdapter',['../class_secondary_adapter.html',1,'']]],
-  ['secondaryconfig',['SecondaryConfig',['../class_uptane_1_1_secondary_config.html',1,'Uptane::SecondaryConfig'],['../class_primary_1_1_secondary_config.html',1,'Primary::SecondaryConfig']]],
+  ['secondaryconfig',['SecondaryConfig',['../class_primary_1_1_secondary_config.html',1,'Primary']]],
   ['secondaryconfigparser',['SecondaryConfigParser',['../class_primary_1_1_secondary_config_parser.html',1,'Primary']]],
-  ['secondaryfactory',['SecondaryFactory',['../class_uptane_1_1_secondary_factory.html',1,'Uptane']]],
   ['secondaryinterface',['SecondaryInterface',['../class_uptane_1_1_secondary_interface.html',1,'Uptane']]],
   ['secondaryinterfacemock',['SecondaryInterfaceMock',['../class_secondary_interface_mock.html',1,'']]],
   ['secondarywaiter',['SecondaryWaiter',['../class_primary_1_1_secondary_waiter.html',1,'Primary']]],

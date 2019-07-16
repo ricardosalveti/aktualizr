@@ -11,7 +11,6 @@ var searchData=
   ['packagemanagerfake',['PackageManagerFake',['../class_package_manager_fake.html',1,'']]],
   ['packagemanagerinterface',['PackageManagerInterface',['../class_package_manager_interface.html',1,'']]],
   ['parse',['parse',['../classaccumulator__type.html#afd88d087bc73adafeeec19aacbe8c705',1,'accumulator_type::parse()'],['../class_o_s_tree_hash.html#a47dbb95abeeff4fd82a3c03af1d5f3d8',1,'OSTreeHash::Parse()']]],
-  ['partialverificationsecondary',['PartialVerificationSecondary',['../class_uptane_1_1_partial_verification_secondary.html',1,'Uptane']]],
   ['pause',['Pause',['../classresult_1_1_pause.html',1,'result::Pause'],['../class_aktualizr.html#a600d9c081a25142f25178430870b09c9',1,'Aktualizr::Pause()']]],
   ['pausestatus',['PauseStatus',['../namespaceresult.html#a80b6967982182189b50631504325349e',1,'result']]],
   ['peekexplicittoken',['PeekExplicitToken',['../classasn1_1_1_peek_explicit_token.html',1,'asn1']]],

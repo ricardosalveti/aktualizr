@@ -10,7 +10,6 @@ var searchData=
   ['packagemanagerfactory',['PackageManagerFactory',['../class_package_manager_factory.html',1,'']]],
   ['packagemanagerfake',['PackageManagerFake',['../class_package_manager_fake.html',1,'']]],
   ['packagemanagerinterface',['PackageManagerInterface',['../class_package_manager_interface.html',1,'']]],
-  ['partialverificationsecondary',['PartialVerificationSecondary',['../class_uptane_1_1_partial_verification_secondary.html',1,'Uptane']]],
   ['pause',['Pause',['../classresult_1_1_pause.html',1,'result']]],
   ['peekexplicittoken',['PeekExplicitToken',['../classasn1_1_1_peek_explicit_token.html',1,'asn1']]],
   ['process',['Process',['../class_process.html',1,'']]],

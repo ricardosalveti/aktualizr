@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['managedsecondary',['ManagedSecondary',['../class_uptane_1_1_managed_secondary.html',1,'Uptane']]],
   ['manifest',['Manifest',['../class_uptane_1_1_manifest.html',1,'Uptane']]],
+  ['metafake',['MetaFake',['../class_meta_fake.html',1,'']]],
   ['metapack',['MetaPack',['../struct_uptane_1_1_meta_pack.html',1,'Uptane']]],
   ['metawithkeys',['MetaWithKeys',['../class_uptane_1_1_meta_with_keys.html',1,'Uptane']]],
   ['misconfiguredecu',['MisconfiguredEcu',['../struct_misconfigured_ecu.html',1,'']]],

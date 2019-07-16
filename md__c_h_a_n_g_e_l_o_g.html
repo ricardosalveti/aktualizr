@@ -66,6 +66,32 @@ $(function() {
 <div class="textblock"><p>This file summarizes notable changes introduced in aktualizr version. It roughly follows the guidelines from <a href="https://keepachangelog.com/en/1.0.0/">Keep a Changelog</a>.</p>
 <p>Our versioning scheme is <code>YEAR.N</code> where <code>N</code> is incremented whenever a new release is deemed necessary. Thus it does not exactly map to months of the year.</p>
 <h2>[??? (unreleased)]</h2>
+<h2>[2019.5] - 2019-07-12</h2>
+<h3>Added</h3>
+<ul>
+<li>TLS support by aktualizr-lite: <a href="https://github.com/advancedtelematic/aktualizr/pull/1237">PR</a></li>
+<li>automatic garage-check usage at the end of garage-push/deploy: <a href="https://github.com/advancedtelematic/aktualizr/pull/1244">PR</a></li>
+<li>ccache support: <a href="https://github.com/advancedtelematic/aktualizr/pull/1248, https://github.com/advancedtelematic/aktualizr/pull/1249">PR</a></li>
+<li>doc on Primary and Secondary bitbaking for RPi: <a href="https://github.com/advancedtelematic/aktualizr/pull/1238">PR</a></li>
+</ul>
+<h3>Changed</h3>
+<ul>
+<li>Stripping of executables in release mode: <a href="https://github.com/advancedtelematic/aktualizr/pull/1234">PR</a></li>
+<li>VirtualSecondary configuration: <a href="https://github.com/advancedtelematic/aktualizr/pull/1246">PR</a></li>
+</ul>
+<h3>Removed</h3>
+<ul>
+<li>Jenkins pipeline and a few references: <a href="https://github.com/advancedtelematic/aktualizr/pull/1236">PR</a></li>
+<li>Test repo meta: <a href="https://github.com/advancedtelematic/aktualizr/pull/1239">PR</a></li>
+<li>SecondaryFactory and VirtualSecondary out of libaktualizr: <a href="https://github.com/advancedtelematic/aktualizr/pull/1241">PR</a></li>
+<li>Fallback on clang-{tidy,format}: <a href="https://github.com/advancedtelematic/aktualizr/pull/1240">PR</a></li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Logic of finding the latest version by aktualizr-lite: <a href="https://github.com/advancedtelematic/aktualizr/pull/1247">PR</a></li>
+<li>Test regression in docker-app-mgr: <a href="https://github.com/advancedtelematic/aktualizr/pull/1250">PR</a></li>
+<li>Some more lintian fixes: <a href="https://github.com/advancedtelematic/aktualizr/pull/1242">PR</a></li>
+</ul>
 <h2>[2019.4] - 2019-06-14</h2>
 <h3>Added</h3>
 <ul>

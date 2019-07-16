@@ -22,5 +22,5 @@ var searchData=
   ['curleasywrapper',['CurlEasyWrapper',['../class_curl_easy_wrapper.html',1,'']]],
   ['curlglobalinitwrapper',['CurlGlobalInitWrapper',['../class_curl_global_init_wrapper.html',1,'']]],
   ['changelog',['Changelog',['../md__c_h_a_n_g_e_l_o_g.html',1,'']]],
-  ['contributing_20to_20the_20sota_20client_20cpp_20project',['Contributing to the SOTA Client CPP Project',['../md__c_o_n_t_r_i_b_u_t_i_n_g.html',1,'']]]
+  ['contributing_20to_20the_20aktualizr_20project',['Contributing to the aktualizr project',['../md__c_o_n_t_r_i_b_u_t_i_n_g.html',1,'']]]
 ];
