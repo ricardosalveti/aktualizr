@@ -50,7 +50,7 @@ class ProvisionDeviceTask {
   ProvisionDeviceTask(const ProvisionDeviceTask &) = delete;
   ProvisionDeviceTask(ProvisionDeviceTask &&) = default;
 
-  void operator()() {
+  void run() {
     try {
       aktualizr_ptr->Initialize();
     } catch (std::exception &err) {
@@ -71,13 +71,13 @@ class ProvisionDeviceTaskStream {
   ProvisionDeviceTaskStream(const path &dstDir_, const ptree &ct, const int ll)
       : gen{}, dstDir{dstDir_}, cfgTemplate{ct}, logLevel{ll} {}
 
-  ProvisionDeviceTask nextTask() {
+  std::unique_ptr<ProvisionDeviceTask> nextTask() {
     LOG_INFO << "Creating provision device task";
     const boost::uuids::uuid deviceId = gen();
     const path deviceBaseDir = mkDeviceBaseDir(deviceId, dstDir);
     const path deviceCfgPath = writeDeviceConfig(cfgTemplate, deviceBaseDir, deviceId);
     Config config = configure(deviceCfgPath, logLevel);
-    return ProvisionDeviceTask{config};
+    return std_::make_unique<ProvisionDeviceTask>(config);
   }
 };
 

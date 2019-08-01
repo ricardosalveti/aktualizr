@@ -120,7 +120,7 @@ class Executor {
         std::this_thread::sleep_until(intendedStartTime);
       }
       const clock::time_point start = clock::now();
-      task();
+      task->run();
       const clock::time_point end = clock::now();
       std::chrono::milliseconds executionTime = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
       stats.recordSuccess(executionTime);

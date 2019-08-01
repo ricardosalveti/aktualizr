@@ -49,7 +49,7 @@ class CheckForUpdate {
     }
   }
 
-  void operator()() {
+  void run() {
     LOG_DEBUG << "Updating a device in " << config.storage.path.native();
     try {
       aktualizr_ptr->CheckUpdates().get();
@@ -61,6 +61,11 @@ class CheckForUpdate {
       LOG_ERROR << "Unknown error occured while checking for updates";
     }
   }
+
+  ~CheckForUpdate() {
+    fs::remove_all(config.storage.path);
+  }
+
 };
 
 class CheckForUpdateTasks {
@@ -77,7 +82,7 @@ class CheckForUpdateTasks {
     rng.seed(seedGen());
   }
 
-  CheckForUpdate nextTask() {
+  std::unique_ptr<CheckForUpdate> nextTask() {
     auto srcConfig = configs[gen(rng)];
     auto config{srcConfig};
     config.storage.path = fs::temp_directory_path() / fs::unique_path();
@@ -86,7 +91,7 @@ class CheckForUpdateTasks {
     fs::permissions(config.storage.path, fs::remove_perms | fs::group_write | fs::others_write);
     fs::copy_file(srcConfig.storage.sqldb_path.get(srcConfig.storage.path),
                   config.storage.sqldb_path.get(config.storage.path));
-    return CheckForUpdate{config};
+    return std_::make_unique<CheckForUpdate>(config);
   }
 };
 
