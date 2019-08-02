@@ -228,13 +228,16 @@ Json::Value Repo::getTarget(const std::string &target_name) {
   if (image_targets["targets"].isMember(target_name)) {
     return image_targets["targets"][target_name];
   } else if (repo_type_ == Uptane::RepositoryType::Image()) {
-    for (auto &p : boost::filesystem::directory_iterator(repo_dir_ / "delegations")) {
-      if (Uptane::Role::IsReserved(p.path().stem().string())) {
-        continue;
-      }
-      auto targets = Utils::parseJSONFile(p)["signed"];
-      if (targets["targets"].isMember(target_name)) {
-        return targets["targets"][target_name];
+    auto d = path_ / "repo" / repo_type_.toString() / "delegations";
+    if (boost::filesystem::exists(d)) {
+      for (auto &p : boost::filesystem::directory_iterator(d)) {
+        if (Uptane::Role::IsReserved(p.path().stem().string())) {
+          continue;
+        }
+        auto targets = Utils::parseJSONFile(p)["signed"];
+        if (targets["targets"].isMember(target_name)) {
+          return targets["targets"][target_name];
+        }
       }
     }
     throw std::runtime_error(std::string("No target with name: ") + target_name);

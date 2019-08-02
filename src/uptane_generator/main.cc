@@ -104,7 +104,7 @@ int main(int argc, char **argv) {
           exit(EXIT_FAILURE);
         }
         auto targetname = (vm.count("targetname") > 0) ? vm["targetname"].as<std::string>()
-                                                       : vm["filename"].as<boost::filesystem::path>();
+                                                       : vm["filename"].as<boost::filesystem::path>().stem();
         const std::string hwid = vm["hwid"].as<std::string>();
 
         Delegation delegation;
