@@ -929,6 +929,19 @@ void SQLStorage::saveInstalledVersion(const std::string& ecu_serial, const Uptan
     }
   }
 
+  auto get_current_id = [&db]() -> int64_t {
+    auto statement = db.prepareStatement("SELECT id FROM installed_versions WHERE is_current = 1");
+    if (statement.step() == SQLITE_DONE) {
+      return -1;
+    } else if (statement.step() == SQLITE_ROW) {
+      return statement.get_result_col_int(0);
+    } else {
+      return -1;
+    }
+  };
+
+  int64_t old_id = get_current_id();
+
   if (update_mode == InstalledVersionUpdateMode::kCurrent) {
     // unset 'current' and 'pending' on all versions for this ecu
     auto statement = db.prepareStatement<std::string>(
@@ -949,16 +962,43 @@ void SQLStorage::saveInstalledVersion(const std::string& ecu_serial, const Uptan
 
   std::string hashes_encoded = Uptane::Hash::encodeVector(target.hashes());
 
-  auto statement =
-      db.prepareStatement<std::string, std::string, std::string, std::string, int64_t, std::string, int, int>(
-          "INSERT OR REPLACE INTO installed_versions VALUES (?,?,?,?,?,?,?,?);", ecu_serial_real, target.sha256Hash(),
-          target.filename(), hashes_encoded, static_cast<int64_t>(target.length()), target.correlation_id(),
-          static_cast<int>(update_mode == InstalledVersionUpdateMode::kCurrent),
-          static_cast<int>(update_mode == InstalledVersionUpdateMode::kPending));
+  {
+    auto statement =
+        db.prepareStatement<std::string, std::string, std::string, std::string, int64_t, std::string, int, int>(
+            "INSERT OR REPLACE INTO installed_versions(ecu_serial, sha256, name, hashes, length, correlation_id, "
+            "is_current, is_pending) VALUES (?,?,?,?,?,?,?,?);",
+            ecu_serial_real, target.sha256Hash(), target.filename(), hashes_encoded,
+            static_cast<int64_t>(target.length()), target.correlation_id(),
+            static_cast<int>(update_mode == InstalledVersionUpdateMode::kCurrent),
+            static_cast<int>(update_mode == InstalledVersionUpdateMode::kPending));
 
-  if (statement.step() != SQLITE_DONE) {
-    LOG_ERROR << "Can't set installed_versions: " << db.errmsg();
-    return;
+    if (statement.step() != SQLITE_DONE) {
+      LOG_ERROR << "Can't set installed_versions: " << db.errmsg();
+      return;
+    }
+  }
+
+  // check if the id of the current version has moved
+  const int64_t new_id = get_current_id();
+  int64_t old_generation = 0;
+
+  // Maintain a log of installation on ecu
+  // Notable invariant: version with highest id is current
+  if (update_mode == InstalledVersionUpdateMode::kCurrent && new_id != old_id) {
+    auto statement = db.prepareStatement<std::string>(
+        "SELECT max(generation) FROM installed_versions_log WHERE ecu_serial = ?", ecu_serial_real);
+
+    if (statement.step() == SQLITE_ROW) {
+      old_generation = statement.get_result_col_int(0);
+    }
+
+    statement = db.prepareStatement<std::string, int64_t, int64_t>(
+        "INSERT INTO installed_versions_log(ecu_serial, generation, installed_version_id) VALUES (?,?,?);",
+        ecu_serial_real, old_generation + 1, new_id);
+    if (statement.step() != SQLITE_DONE) {
+      LOG_ERROR << "Can't set installed_versions: " << db.errmsg();
+      return;
+    }
   }
 
   db.commitTransaction();
