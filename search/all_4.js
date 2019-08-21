@@ -8,6 +8,7 @@ var searchData=
   ['delegationhashmismatch',['DelegationHashMismatch',['../class_uptane_1_1_delegation_hash_mismatch.html',1,'Uptane']]],
   ['delegationiterator',['DelegationIterator',['../class_uptane_1_1_lazy_targets_list_1_1_delegation_iterator.html',1,'Uptane::LazyTargetsList']]],
   ['delegationmissing',['DelegationMissing',['../class_uptane_1_1_delegation_missing.html',1,'Uptane']]],
+  ['deletestoredtarget',['DeleteStoredTarget',['../class_aktualizr.html#a83345a22980888e720df8fc03383a146',1,'Aktualizr']]],
   ['dequeuebuffer',['DequeueBuffer',['../class_dequeue_buffer.html',1,'']]],
   ['deserialization_5ferror',['deserialization_error',['../classdeserialization__error.html',1,'']]],
   ['deserializer',['Deserializer',['../classasn1_1_1_deserializer.html',1,'asn1']]],

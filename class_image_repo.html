@@ -84,12 +84,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab153444a82d1e8e3de91d7d558927b9f"><td class="memItemLeft" align="right" valign="top"><a id="ab153444a82d1e8e3de91d7d558927b9f"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>ImageRepo</b> (boost::filesystem::path path, const std::string &amp;expires, std::string correlation_id)</td></tr>
 <tr class="separator:ab153444a82d1e8e3de91d7d558927b9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac19f453877ba7ec9f2264c3acb0eca90"><td class="memItemLeft" align="right" valign="top"><a id="ac19f453877ba7ec9f2264c3acb0eca90"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addBinaryImage</b> (const boost::filesystem::path &amp;image_path, const boost::filesystem::path &amp;targetname, const <a class="el" href="struct_delegation.html">Delegation</a> &amp;delegation={})</td></tr>
-<tr class="separator:ac19f453877ba7ec9f2264c3acb0eca90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f2036c3e8741f1aed333c3800bf7a4f"><td class="memItemLeft" align="right" valign="top"><a id="a6f2036c3e8741f1aed333c3800bf7a4f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addCustomImage</b> (const std::string &amp;name, const <a class="el" href="class_uptane_1_1_hash.html">Uptane::Hash</a> &amp;hash, uint64_t length, const <a class="el" href="struct_delegation.html">Delegation</a> &amp;delegation, const Json::Value &amp;custom={})</td></tr>
-<tr class="separator:a6f2036c3e8741f1aed333c3800bf7a4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a6a5c45dabf74ee5fbe82f4755231ec"><td class="memItemLeft" align="right" valign="top"><a id="a1a6a5c45dabf74ee5fbe82f4755231ec"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addBinaryImage</b> (const boost::filesystem::path &amp;image_path, const boost::filesystem::path &amp;targetname, const std::string &amp;hardware_id, const std::string &amp;url, const <a class="el" href="struct_delegation.html">Delegation</a> &amp;delegation={})</td></tr>
+<tr class="separator:a1a6a5c45dabf74ee5fbe82f4755231ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af98c8d3cfa34e67f17b4ffd5931f0e2d"><td class="memItemLeft" align="right" valign="top"><a id="af98c8d3cfa34e67f17b4ffd5931f0e2d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addCustomImage</b> (const std::string &amp;name, const <a class="el" href="class_uptane_1_1_hash.html">Uptane::Hash</a> &amp;hash, uint64_t length, const std::string &amp;hardware_id, const std::string &amp;url, const <a class="el" href="struct_delegation.html">Delegation</a> &amp;delegation, const Json::Value &amp;custom={})</td></tr>
+<tr class="separator:af98c8d3cfa34e67f17b4ffd5931f0e2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa52018aeaf33b416e0fb7baa7fa4caf3"><td class="memItemLeft" align="right" valign="top"><a id="aa52018aeaf33b416e0fb7baa7fa4caf3"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>addDelegation</b> (const <a class="el" href="class_uptane_1_1_role.html">Uptane::Role</a> &amp;name, const <a class="el" href="class_uptane_1_1_role.html">Uptane::Role</a> &amp;parent_role, const std::string &amp;path, bool terminating, KeyType key_type)</td></tr>
 <tr class="separator:aa52018aeaf33b416e0fb7baa7fa4caf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -152,8 +152,8 @@ std::map&lt; <a class="el" href="class_uptane_1_1_role.html">Uptane::Role</a>, <
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="image__repo_8h_source.html#l00006">6</a> of file <a class="el" href="image__repo_8h_source.html">image_repo.h</a>.</p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
-<li>src/aktualizr_repo/<a class="el" href="image__repo_8h_source.html">image_repo.h</a></li>
-<li>src/aktualizr_repo/<a class="el" href="image__repo_8cc_source.html">image_repo.cc</a></li>
+<li>src/uptane_generator/<a class="el" href="image__repo_8h_source.html">image_repo.h</a></li>
+<li>src/uptane_generator/<a class="el" href="image__repo_8cc_source.html">image_repo.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

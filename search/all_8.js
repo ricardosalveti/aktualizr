@@ -7,6 +7,7 @@ var searchData=
   ['haveenqueued',['HaveEnqueued',['../class_dequeue_buffer.html#a92f691d138875540907baf8ebf619633',1,'DequeueBuffer']]],
   ['head',['Head',['../class_dequeue_buffer.html#a7d9007c3e6619e0032eed9f005a64d0c',1,'DequeueBuffer']]],
   ['histogram',['Histogram',['../class_histogram.html',1,'']]],
+  ['httpcheckurl',['HttpCheckUrl',['../class_http_check_url.html',1,'']]],
   ['httpclient',['HttpClient',['../class_http_client.html',1,'']]],
   ['httpcustomuri',['HttpCustomUri',['../class_http_custom_uri.html',1,'']]],
   ['httpdefaulturi',['HttpDefaultUri',['../class_http_default_uri.html',1,'']]],
@@ -25,5 +26,6 @@ var searchData=
   ['httpinterface',['HttpInterface',['../class_http_interface.html',1,'']]],
   ['httpputmanifestfail',['HttpPutManifestFail',['../class_http_put_manifest_fail.html',1,'']]],
   ['httprejectemptycorrid',['HttpRejectEmptyCorrId',['../class_http_reject_empty_corr_id.html',1,'']]],
-  ['httpresponse',['HttpResponse',['../struct_http_response.html',1,'']]]
+  ['httpresponse',['HttpResponse',['../struct_http_response.html',1,'']]],
+  ['httpzerolength',['HttpZeroLength',['../class_http_zero_length.html',1,'']]]
 ];

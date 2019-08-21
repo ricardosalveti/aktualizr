@@ -75,21 +75,21 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7865ae5240370b4b43718967f080089c"><td class="memItemLeft" align="right" valign="top"><a id="a7865ae5240370b4b43718967f080089c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>generateRepo</b> (KeyType key_type=KeyType::kRSA2048)</td></tr>
 <tr class="separator:a7865ae5240370b4b43718967f080089c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39a4e8089a534bdd1f3e17e443d8e5c6"><td class="memItemLeft" align="right" valign="top"><a id="a39a4e8089a534bdd1f3e17e443d8e5c6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addTarget</b> (const std::string &amp;target_name, const std::string &amp;hardware_id, const std::string &amp;ecu_serial)</td></tr>
-<tr class="separator:a39a4e8089a534bdd1f3e17e443d8e5c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8781fb894ecf003c559e1f568eed7dd6"><td class="memItemLeft" align="right" valign="top"><a id="a8781fb894ecf003c559e1f568eed7dd6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addImage</b> (const boost::filesystem::path &amp;image_path, const boost::filesystem::path &amp;targetname, const <a class="el" href="struct_delegation.html">Delegation</a> &amp;delegation)</td></tr>
-<tr class="separator:a8781fb894ecf003c559e1f568eed7dd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77d792874de15c0ce687a33ea2386b5c"><td class="memItemLeft" align="right" valign="top"><a id="a77d792874de15c0ce687a33ea2386b5c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addTarget</b> (const std::string &amp;target_name, const std::string &amp;hardware_id, const std::string &amp;ecu_serial, const std::string &amp;url)</td></tr>
+<tr class="separator:a77d792874de15c0ce687a33ea2386b5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74194c710b1ecc1af4c066fc071bfeab"><td class="memItemLeft" align="right" valign="top"><a id="a74194c710b1ecc1af4c066fc071bfeab"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addImage</b> (const boost::filesystem::path &amp;image_path, const boost::filesystem::path &amp;targetname, const std::string &amp;hardware_id, const std::string &amp;url, const <a class="el" href="struct_delegation.html">Delegation</a> &amp;delegation)</td></tr>
+<tr class="separator:a74194c710b1ecc1af4c066fc071bfeab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afaa3d226a6306f0d6a2f7b1045c9471b"><td class="memItemLeft" align="right" valign="top"><a id="afaa3d226a6306f0d6a2f7b1045c9471b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>addDelegation</b> (const <a class="el" href="class_uptane_1_1_role.html">Uptane::Role</a> &amp;name, const <a class="el" href="class_uptane_1_1_role.html">Uptane::Role</a> &amp;parent_role, const std::string &amp;path, bool terminating, KeyType key_type)</td></tr>
 <tr class="separator:afaa3d226a6306f0d6a2f7b1045c9471b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79cfa06b42705f5f90ebe5b4e589a94c"><td class="memItemLeft" align="right" valign="top"><a id="a79cfa06b42705f5f90ebe5b4e589a94c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>revokeDelegation</b> (const <a class="el" href="class_uptane_1_1_role.html">Uptane::Role</a> &amp;name)</td></tr>
 <tr class="separator:a79cfa06b42705f5f90ebe5b4e589a94c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c5ba5ffab3f0bdaa75d1dad878e3aea"><td class="memItemLeft" align="right" valign="top"><a id="a6c5ba5ffab3f0bdaa75d1dad878e3aea"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addCustomImage</b> (const std::string &amp;name, const <a class="el" href="class_uptane_1_1_hash.html">Uptane::Hash</a> &amp;hash, uint64_t length, const <a class="el" href="struct_delegation.html">Delegation</a> &amp;delegation={}, const Json::Value &amp;custom={})</td></tr>
-<tr class="separator:a6c5ba5ffab3f0bdaa75d1dad878e3aea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8189a12dfdf176d5e33905ddcd050580"><td class="memItemLeft" align="right" valign="top"><a id="a8189a12dfdf176d5e33905ddcd050580"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addCustomImage</b> (const std::string &amp;name, const <a class="el" href="class_uptane_1_1_hash.html">Uptane::Hash</a> &amp;hash, uint64_t length, const std::string &amp;hardware_id, const std::string &amp;url, const <a class="el" href="struct_delegation.html">Delegation</a> &amp;delegation={}, const Json::Value &amp;custom={})</td></tr>
+<tr class="separator:a8189a12dfdf176d5e33905ddcd050580"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7cd2fa557a462505e214070f9e2519cb"><td class="memItemLeft" align="right" valign="top"><a id="a7cd2fa557a462505e214070f9e2519cb"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>signTargets</b> ()</td></tr>
 <tr class="separator:a7cd2fa557a462505e214070f9e2519cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -104,8 +104,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>oldTargets</b> ()</td
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="uptane__repo_8h_source.html#l00007">7</a> of file <a class="el" href="uptane__repo_8h_source.html">uptane_repo.h</a>.</p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
-<li>src/aktualizr_repo/<a class="el" href="uptane__repo_8h_source.html">uptane_repo.h</a></li>
-<li>src/aktualizr_repo/<a class="el" href="uptane__repo_8cc_source.html">uptane_repo.cc</a></li>
+<li>src/uptane_generator/<a class="el" href="uptane__repo_8h_source.html">uptane_repo.h</a></li>
+<li>src/uptane_generator/<a class="el" href="uptane__repo_8cc_source.html">uptane_repo.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

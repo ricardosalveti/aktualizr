@@ -78,12 +78,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6deefaaa95b337bff14a89e04d81ff29"><td class="memItemLeft" align="right" valign="top"><a id="a6deefaaa95b337bff14a89e04d81ff29"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Target</b> (std::string filename, const Json::Value &amp;content)</td></tr>
 <tr class="separator:a6deefaaa95b337bff14a89e04d81ff29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acfbfcb80eb16b40e3a0e1ac72d20deb1"><td class="memItemLeft" align="right" valign="top"><a id="acfbfcb80eb16b40e3a0e1ac72d20deb1"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Target</b> (std::string filename, std::vector&lt; <a class="el" href="class_uptane_1_1_hash.html">Hash</a> &gt; hashes, uint64_t length, std::string correlation_id=&quot;&quot;)</td></tr>
-<tr class="separator:acfbfcb80eb16b40e3a0e1ac72d20deb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4696fc51c0776dcb2a02f5fa008ed75"><td class="memItemLeft" align="right" valign="top"><a id="aa4696fc51c0776dcb2a02f5fa008ed75"></a>
-const std::map&lt; <a class="el" href="class_uptane_1_1_ecu_serial.html">EcuSerial</a>, <a class="el" href="class_uptane_1_1_hardware_identifier.html">HardwareIdentifier</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>ecus</b> () const</td></tr>
-<tr class="separator:aa4696fc51c0776dcb2a02f5fa008ed75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a954cbd8f2a83994e038064f2b728712b"><td class="memItemLeft" align="right" valign="top"><a id="a954cbd8f2a83994e038064f2b728712b"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Target</b> (std::string filename, EcuMap ecus, std::vector&lt; <a class="el" href="class_uptane_1_1_hash.html">Hash</a> &gt; hashes, uint64_t length, std::string correlation_id=&quot;&quot;)</td></tr>
+<tr class="separator:a954cbd8f2a83994e038064f2b728712b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03e19a1e52fffb69dfe41806f8dbd0a3"><td class="memItemLeft" align="right" valign="top"><a id="a03e19a1e52fffb69dfe41806f8dbd0a3"></a>
+const EcuMap &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>ecus</b> () const</td></tr>
+<tr class="separator:a03e19a1e52fffb69dfe41806f8dbd0a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a858037257b489fa34ff30595fff52ec3"><td class="memItemLeft" align="right" valign="top"><a id="a858037257b489fa34ff30595fff52ec3"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>filename</b> () const</td></tr>
 <tr class="separator:a858037257b489fa34ff30595fff52ec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -120,9 +120,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsValid</b> () const<
 <tr class="memitem:a6d39b9a10fc981d01486e659e81ba603"><td class="memItemLeft" align="right" valign="top"><a id="a6d39b9a10fc981d01486e659e81ba603"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>uri</b> () const</td></tr>
 <tr class="separator:a6d39b9a10fc981d01486e659e81ba603"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2818ed3b7a373b3dae7d74fd83a0911"><td class="memItemLeft" align="right" valign="top"><a id="af2818ed3b7a373b3dae7d74fd83a0911"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>MatchWith</b> (const <a class="el" href="class_uptane_1_1_hash.html">Hash</a> &amp;hash) const</td></tr>
-<tr class="separator:af2818ed3b7a373b3dae7d74fd83a0911"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42e2a04b5cbee3540abb8f8173dcefad"><td class="memItemLeft" align="right" valign="top"><a id="a42e2a04b5cbee3540abb8f8173dcefad"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setUri</b> (std::string uri)</td></tr>
+<tr class="separator:a42e2a04b5cbee3540abb8f8173dcefad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa39e6ba8a9648b58636727a2a74f9dca"><td class="memItemLeft" align="right" valign="top"><a id="aa39e6ba8a9648b58636727a2a74f9dca"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>MatchHash</b> (const <a class="el" href="class_uptane_1_1_hash.html">Hash</a> &amp;hash) const</td></tr>
+<tr class="separator:aa39e6ba8a9648b58636727a2a74f9dca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac971526631d747d09200832b47f3912e"><td class="memItemLeft" align="right" valign="top"><a id="ac971526631d747d09200832b47f3912e"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsForSecondary</b> (const <a class="el" href="class_uptane_1_1_ecu_serial.html">EcuSerial</a> &amp;ecuIdentifier) const</td></tr>
 <tr class="separator:ac971526631d747d09200832b47f3912e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -130,9 +133,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsForSecondary</b> (c
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uptane_1_1_target.html#a3cb159cb07df896667288794df362cb8">IsOstree</a> () const</td></tr>
 <tr class="memdesc:a3cb159cb07df896667288794df362cb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this an OSTree target? OSTree targets need special treatment because the hash doesn't represent the contents of the update itself, instead it is the hash (name) of the root commit object. <br /></td></tr>
 <tr class="separator:a3cb159cb07df896667288794df362cb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a332bbe65cdd45354ff0dd293fdf2a5b5"><td class="memItemLeft" align="right" valign="top"><a id="a332bbe65cdd45354ff0dd293fdf2a5b5"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="class_uptane_1_1_target.html">Target</a> &amp;t2) const</td></tr>
-<tr class="separator:a332bbe65cdd45354ff0dd293fdf2a5b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22ce4492a3bad3e4addb63cbe9c58b38"><td class="memItemLeft" align="right" valign="top"><a id="a22ce4492a3bad3e4addb63cbe9c58b38"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="class_uptane_1_1_target.html">Target</a> &amp;t2)=delete</td></tr>
+<tr class="separator:a22ce4492a3bad3e4addb63cbe9c58b38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4313636baad05bbeb3b6ddabe08809f4"><td class="memItemLeft" align="right" valign="top"><a id="a4313636baad05bbeb3b6ddabe08809f4"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>MatchTarget</b> (const <a class="el" href="class_uptane_1_1_target.html">Target</a> &amp;t2) const</td></tr>
+<tr class="separator:a4313636baad05bbeb3b6ddabe08809f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ece70b954cc0a41e12d6515d3b739b0"><td class="memItemLeft" align="right" valign="top"><a id="a3ece70b954cc0a41e12d6515d3b739b0"></a>
 Json::Value&#160;</td><td class="memItemRight" valign="bottom"><b>toDebugJson</b> () const</td></tr>
 <tr class="separator:a3ece70b954cc0a41e12d6515d3b739b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -151,7 +157,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operato
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="tuf_8h_source.html#l00222">222</a> of file <a class="el" href="tuf_8h_source.html">tuf.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tuf_8h_source.html#l00225">225</a> of file <a class="el" href="tuf_8h_source.html">tuf.h</a>.</p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/libaktualizr/uptane/<a class="el" href="tuf_8h_source.html">tuf.h</a></li>
 <li>src/libaktualizr/uptane/<a class="el" href="tuf_8cc_source.html">tuf.cc</a></li>

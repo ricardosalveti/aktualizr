@@ -12,10 +12,10 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="struct_device_cred_generator_1_1_output_path.html" target="_top" xlink:title="DeviceCredGenerator\l::OutputPath">
+<g id="a_node1"><a xlink:href="class_device_cred_generator_1_1_arg_set.html" target="_top" xlink:title="DeviceCredGenerator\l::ArgSet">
 <polygon fill="#ffffff" stroke="#000000" points="0,-.5 0,-30.5 111,-30.5 111,-.5 0,-.5"/>
 <text text-anchor="start" x="8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">DeviceCredGenerator</text>
-<text text-anchor="middle" x="55.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">::OutputPath</text>
+<text text-anchor="middle" x="55.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">::ArgSet</text>
 </a>
 </g>
 </g>
