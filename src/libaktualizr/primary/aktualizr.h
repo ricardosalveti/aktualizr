@@ -197,8 +197,6 @@ class Aktualizr {
   std::shared_ptr<SotaUptaneClient> uptane_client_;
 
  private:
-  static void systemSetup();
-
   std::shared_ptr<INvStorage> storage_;
   std::shared_ptr<event::Channel> sig_;
   api::CommandQueue api_queue_;
