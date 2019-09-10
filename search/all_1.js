@@ -3,7 +3,7 @@ var searchData=
   ['abort',['Abort',['../class_aktualizr.html#a29efa69f4904b62353b2268e1a2d8e85',1,'Aktualizr']]],
   ['accumulator_5ftype',['accumulator_type',['../classaccumulator__type.html',1,'']]],
   ['addsecondary',['AddSecondary',['../class_aktualizr.html#ad433bb3340ec534e1557289f0399e518',1,'Aktualizr']]],
-  ['aktualizr',['Aktualizr',['../classipsecondary__test_1_1_aktualizr.html',1,'ipsecondary_test.Aktualizr'],['../class_aktualizr.html',1,'Aktualizr'],['../class_aktualizr.html#a630ad4b774157242e61d0d040cb97e0d',1,'Aktualizr::Aktualizr()']]],
+  ['aktualizr',['Aktualizr',['../classtest__fixtures_1_1_aktualizr.html',1,'test_fixtures.Aktualizr'],['../class_aktualizr.html',1,'Aktualizr'],['../class_aktualizr.html#a630ad4b774157242e61d0d040cb97e0d',1,'Aktualizr::Aktualizr()']]],
   ['aktualizrcertprovidertest',['AktualizrCertProviderTest',['../class_aktualizr_cert_provider_test.html',1,'']]],
   ['aktualizrinfoconfig',['AktualizrInfoConfig',['../class_aktualizr_info_config.html',1,'']]],
   ['aktualizrinfoprocess',['AktualizrInfoProcess',['../class_aktualizr_info_test_1_1_aktualizr_info_process.html',1,'AktualizrInfoTest']]],

@@ -70,12 +70,14 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for EphemeralStorage:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_ephemeral_storage__inherit__graph.svg" width="246" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_ephemeral_storage__inherit__graph.svg" width="246" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for EphemeralStorage:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_ephemeral_storage__coll__graph.svg" width="450" height="486"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_ephemeral_storage__coll__graph.svg" width="450" height="486"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -210,9 +212,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>clearNeedReboot</b> (
 <tr class="memitem:a930727cae4827fedf78e0126d6b2c495 inherit pub_methods_class_s_q_l_storage"><td class="memItemLeft" align="right" valign="top"><a id="a930727cae4827fedf78e0126d6b2c495"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>saveInstalledVersion</b> (const std::string &amp;ecu_serial, const <a class="el" href="class_uptane_1_1_target.html">Uptane::Target</a> &amp;target, InstalledVersionUpdateMode update_mode) override</td></tr>
 <tr class="separator:a930727cae4827fedf78e0126d6b2c495 inherit pub_methods_class_s_q_l_storage"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa225ba6b955252246a8bd8b2666dc8f1 inherit pub_methods_class_s_q_l_storage"><td class="memItemLeft" align="right" valign="top"><a id="aa225ba6b955252246a8bd8b2666dc8f1"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>loadInstalledVersions</b> (const std::string &amp;ecu_serial, std::vector&lt; <a class="el" href="class_uptane_1_1_target.html">Uptane::Target</a> &gt; *installed_versions, size_t *current_version, size_t *pending_version) override</td></tr>
-<tr class="separator:aa225ba6b955252246a8bd8b2666dc8f1 inherit pub_methods_class_s_q_l_storage"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae3bf9b0f6e80ee320d7142d9ef74af1 inherit pub_methods_class_s_q_l_storage"><td class="memItemLeft" align="right" valign="top"><a id="aae3bf9b0f6e80ee320d7142d9ef74af1"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>loadInstalledVersions</b> (const std::string &amp;ecu_serial, boost::optional&lt; <a class="el" href="class_uptane_1_1_target.html">Uptane::Target</a> &gt; *current_version, boost::optional&lt; <a class="el" href="class_uptane_1_1_target.html">Uptane::Target</a> &gt; *pending_version) override</td></tr>
+<tr class="separator:aae3bf9b0f6e80ee320d7142d9ef74af1 inherit pub_methods_class_s_q_l_storage"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaebb4d4c61fe8b9db99ca0e7d85e1ca1 inherit pub_methods_class_s_q_l_storage"><td class="memItemLeft" align="right" valign="top"><a id="aaebb4d4c61fe8b9db99ca0e7d85e1ca1"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>loadInstallationLog</b> (const std::string &amp;ecu_serial, std::vector&lt; <a class="el" href="class_uptane_1_1_target.html">Uptane::Target</a> &gt; *log, bool only_installed) override</td></tr>
+<tr class="separator:aaebb4d4c61fe8b9db99ca0e7d85e1ca1 inherit pub_methods_class_s_q_l_storage"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a809e0b6c555ebf7d1b0720b095272d4f inherit pub_methods_class_s_q_l_storage"><td class="memItemLeft" align="right" valign="top"><a id="a809e0b6c555ebf7d1b0720b095272d4f"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>hasPendingInstall</b> () override</td></tr>
 <tr class="separator:a809e0b6c555ebf7d1b0720b095272d4f inherit pub_methods_class_s_q_l_storage"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -287,12 +292,15 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>loadLatestRoot</b> (s
 <tr class="memitem:a6fea132e054302da264fe45896b60c0a inherit pub_methods_class_i_nv_storage"><td class="memItemLeft" align="right" valign="top"><a id="a6fea132e054302da264fe45896b60c0a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>importData</b> (const <a class="el" href="struct_import_config.html">ImportConfig</a> &amp;import_config)</td></tr>
 <tr class="separator:a6fea132e054302da264fe45896b60c0a inherit pub_methods_class_i_nv_storage"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b91d7666a7d4027f3e590655aa244f6 inherit pub_methods_class_i_nv_storage"><td class="memItemLeft" align="right" valign="top"><a id="a0b91d7666a7d4027f3e590655aa244f6"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>loadPrimaryInstalledVersions</b> (std::vector&lt; <a class="el" href="class_uptane_1_1_target.html">Uptane::Target</a> &gt; *installed_versions, size_t *current_version, size_t *pending_version)</td></tr>
-<tr class="separator:a0b91d7666a7d4027f3e590655aa244f6 inherit pub_methods_class_i_nv_storage"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7142c68c4ef8b88cc47ee779089d29cc inherit pub_methods_class_i_nv_storage"><td class="memItemLeft" align="right" valign="top"><a id="a7142c68c4ef8b88cc47ee779089d29cc"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>loadPrimaryInstalledVersions</b> (boost::optional&lt; <a class="el" href="class_uptane_1_1_target.html">Uptane::Target</a> &gt; *current_version, boost::optional&lt; <a class="el" href="class_uptane_1_1_target.html">Uptane::Target</a> &gt; *pending_version)</td></tr>
+<tr class="separator:a7142c68c4ef8b88cc47ee779089d29cc inherit pub_methods_class_i_nv_storage"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88dff6716d38d0c0f6dc89f63937d5b3 inherit pub_methods_class_i_nv_storage"><td class="memItemLeft" align="right" valign="top"><a id="a88dff6716d38d0c0f6dc89f63937d5b3"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>savePrimaryInstalledVersion</b> (const <a class="el" href="class_uptane_1_1_target.html">Uptane::Target</a> &amp;target, InstalledVersionUpdateMode update_mode)</td></tr>
 <tr class="separator:a88dff6716d38d0c0f6dc89f63937d5b3 inherit pub_methods_class_i_nv_storage"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b23fe274e67a65acf9c9047d6e7ac2d inherit pub_methods_class_i_nv_storage"><td class="memItemLeft" align="right" valign="top"><a id="a9b23fe274e67a65acf9c9047d6e7ac2d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>loadPrimaryInstallationLog</b> (std::vector&lt; <a class="el" href="class_uptane_1_1_target.html">Uptane::Target</a> &gt; *log, bool only_installed)</td></tr>
+<tr class="separator:a9b23fe274e67a65acf9c9047d6e7ac2d inherit pub_methods_class_i_nv_storage"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>

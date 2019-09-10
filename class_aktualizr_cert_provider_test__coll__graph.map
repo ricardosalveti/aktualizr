@@ -1,8 +1,8 @@
 <map id="AktualizrCertProviderTest" name="AktualizrCertProviderTest">
-<area shape="rect" id="node4" href="$class_temporary_directory.html" title="TemporaryDirectory" alt="" coords="448,107,585,133"/>
-<area shape="rect" id="node5" href="$class_device_cred_generator.html" title="DeviceCredGenerator" alt="" coords="443,157,591,184"/>
-<area shape="rect" id="node6" href="$class_process.html" title="Process" alt="" coords="186,152,257,179"/>
-<area shape="rect" id="node7" href="$struct_aktualizr_cert_provider_test_1_1_test_args.html" title="AktualizrCertProviderTest\l::TestArgs" alt="" coords="431,214,603,255"/>
-<area shape="rect" id="node8" title="STL class. " alt="" coords="181,231,261,257"/>
-<area shape="rect" id="node9" title="STL class. " alt="" coords="5,223,132,265"/>
+<area shape="rect" id="node3" href="$class_temporary_directory.html" title="TemporaryDirectory" alt="" coords="78,237,215,263"/>
+<area shape="rect" id="node4" href="$class_device_cred_generator.html" title="DeviceCredGenerator" alt="" coords="239,237,387,263"/>
+<area shape="rect" id="node5" href="$class_process.html" title="Process" alt="" coords="278,96,349,123"/>
+<area shape="rect" id="node6" href="$struct_aktualizr_cert_provider_test_1_1_test_args.html" title="AktualizrCertProviderTest\l::TestArgs" alt="" coords="411,229,583,271"/>
+<area shape="rect" id="node7" title="STL class. " alt="" coords="457,96,537,123"/>
+<area shape="rect" id="node8" title="STL class. " alt="" coords="434,5,561,47"/>
 </map>

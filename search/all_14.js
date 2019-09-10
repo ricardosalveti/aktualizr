@@ -11,9 +11,9 @@ var searchData=
   ['uptaneconfig',['UptaneConfig',['../struct_uptane_config.html',1,'']]],
   ['uptanecycle',['UptaneCycle',['../class_aktualizr.html#a77aa070899448a7589c5e66befc41d6a',1,'Aktualizr']]],
   ['uptanekey_5fcheck_5ftest',['UptaneKey_Check_Test',['../class_uptane_key___check___test.html',1,'']]],
-  ['uptanerepo',['UptaneRepo',['../class_uptane_repo.html',1,'']]],
+  ['uptanerepo',['UptaneRepo',['../classtest__fixtures_1_1_uptane_repo.html',1,'test_fixtures.UptaneRepo'],['../class_uptane_repo.html',1,'UptaneRepo']]],
   ['uptanetestcommon',['UptaneTestCommon',['../struct_uptane_test_common.html',1,'']]],
-  ['uptanetestrepo',['UptaneTestRepo',['../classipsecondary__test_1_1_uptane_test_repo.html',1,'ipsecondary_test']]],
+  ['uptanetestrepo',['UptaneTestRepo',['../classtest__fixtures_1_1_uptane_test_repo.html',1,'test_fixtures']]],
   ['uptanevector',['UptaneVector',['../class_uptane_vector.html',1,'']]],
   ['utils',['Utils',['../struct_utils.html',1,'']]],
   ['utils_5ftest_2ecc',['utils_test.cc',['../utils__test_8cc.html',1,'']]]

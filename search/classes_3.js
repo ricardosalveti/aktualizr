@@ -17,5 +17,6 @@ var searchData=
   ['countupdatecheckevents',['CountUpdateCheckEvents',['../class_count_update_check_events.html',1,'']]],
   ['crypto',['Crypto',['../class_crypto.html',1,'']]],
   ['curleasywrapper',['CurlEasyWrapper',['../class_curl_easy_wrapper.html',1,'']]],
-  ['curlglobalinitwrapper',['CurlGlobalInitWrapper',['../class_curl_global_init_wrapper.html',1,'']]]
+  ['curlglobalinitwrapper',['CurlGlobalInitWrapper',['../class_curl_global_init_wrapper.html',1,'']]],
+  ['customrepo',['CustomRepo',['../classtest__fixtures_1_1_custom_repo.html',1,'test_fixtures']]]
 ];

@@ -6,9 +6,9 @@ var searchData=
   ['updatecheckcomplete',['UpdateCheckComplete',['../classevent_1_1_update_check_complete.html',1,'event']]],
   ['uptaneconfig',['UptaneConfig',['../struct_uptane_config.html',1,'']]],
   ['uptanekey_5fcheck_5ftest',['UptaneKey_Check_Test',['../class_uptane_key___check___test.html',1,'']]],
-  ['uptanerepo',['UptaneRepo',['../class_uptane_repo.html',1,'']]],
+  ['uptanerepo',['UptaneRepo',['../classtest__fixtures_1_1_uptane_repo.html',1,'test_fixtures.UptaneRepo'],['../class_uptane_repo.html',1,'UptaneRepo']]],
   ['uptanetestcommon',['UptaneTestCommon',['../struct_uptane_test_common.html',1,'']]],
-  ['uptanetestrepo',['UptaneTestRepo',['../classipsecondary__test_1_1_uptane_test_repo.html',1,'ipsecondary_test']]],
+  ['uptanetestrepo',['UptaneTestRepo',['../classtest__fixtures_1_1_uptane_test_repo.html',1,'test_fixtures']]],
   ['uptanevector',['UptaneVector',['../class_uptane_vector.html',1,'']]],
   ['utils',['Utils',['../struct_utils.html',1,'']]]
 ];

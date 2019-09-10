@@ -66,6 +66,28 @@ $(function() {
 <div class="textblock"><p>This file summarizes notable changes introduced in aktualizr version. It roughly follows the guidelines from <a href="https://keepachangelog.com/en/1.0.0/">Keep a Changelog</a>.</p>
 <p>Our versioning scheme is <code>YEAR.N</code> where <code>N</code> is incremented whenever a new release is deemed necessary. Thus it does not exactly map to months of the year.</p>
 <h2>[??? (unreleased)]</h2>
+<h2>[2019.7] - 2019-09-10</h2>
+<h3>Added</h3>
+<ul>
+<li><code>GetInstallationLog</code> API method: <a href="https://github.com/advancedtelematic/aktualizr/pull/1318">PR</a></li>
+<li>The aktualizr daemon will now automatically remove old downloaded targets to free up disk space: <a href="https://github.com/advancedtelematic/aktualizr/pull/1318">PR</a></li>
+<li>CA path is now always supplied to curl and can be overwritten: <a href="https://github.com/advancedtelematic/aktualizr/pull/1294">PR</a></li>
+</ul>
+<h3>Changed</h3>
+<ul>
+<li>garage-push and garage-deploy can now stream OSTree objects to <a href="https://github.com/advancedtelematic/treehub/pull/70">S3 via Treehub</a> (instead of getting copied): <a href="https://github.com/advancedtelematic/aktualizr/pull/1305">PR</a></li>
+</ul>
+<h3>Removed</h3>
+<ul>
+<li>hmi-stub (replaced by <a href="https://github.com/advancedtelematic/libaktualizr-demo-app">libaktualizr-demo-app</a>): <a href="https://github.com/advancedtelematic/aktualizr/pull/1310">PR</a></li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li><a class="el" href="namespace_uptane.html" title="Base data types that are used in The Update Framework (TUF), part of UPTANE. ">Uptane</a> metadata is now rechecked (offline) before downloading and installing: <a href="https://github.com/advancedtelematic/aktualizr/pull/1296">PR</a></li>
+<li>Downloaded target hashes are rechecked before installation: <a href="https://github.com/advancedtelematic/aktualizr/pull/1296">PR</a></li>
+<li>Failed downloads are now reported to the backend in the installation report: <a href="https://github.com/advancedtelematic/aktualizr/pull/1301">PR</a></li>
+<li>Binary targets for an OSTree-based primary are now rejected immediately: <a href="https://github.com/advancedtelematic/aktualizr/pull/1282">PR</a></li>
+</ul>
 <h2>[2019.6] - 2019-08-21</h2>
 <h3>Added</h3>
 <ul>

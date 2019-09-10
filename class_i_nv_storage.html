@@ -71,12 +71,14 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for INvStorage:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_i_nv_storage__inherit__graph.svg" width="140" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_i_nv_storage__inherit__graph.svg" width="140" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for INvStorage:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_i_nv_storage__coll__graph.svg" width="210" height="319"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_i_nv_storage__coll__graph.svg" width="210" height="319"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -213,9 +215,12 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>clearNeedRebo
 <tr class="memitem:a3453cf4b35e6fb3ddfce6e33784262a2"><td class="memItemLeft" align="right" valign="top"><a id="a3453cf4b35e6fb3ddfce6e33784262a2"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>saveInstalledVersion</b> (const std::string &amp;ecu_serial, const <a class="el" href="class_uptane_1_1_target.html">Uptane::Target</a> &amp;target, InstalledVersionUpdateMode update_mode)=0</td></tr>
 <tr class="separator:a3453cf4b35e6fb3ddfce6e33784262a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9ecc557b33cdaa49ed524c0a49d8558"><td class="memItemLeft" align="right" valign="top"><a id="aa9ecc557b33cdaa49ed524c0a49d8558"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>loadInstalledVersions</b> (const std::string &amp;ecu_serial, std::vector&lt; <a class="el" href="class_uptane_1_1_target.html">Uptane::Target</a> &gt; *installed_versions, size_t *current_version, size_t *pending_version)=0</td></tr>
-<tr class="separator:aa9ecc557b33cdaa49ed524c0a49d8558"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8dd5f7eac307a2f12ca52ce449ad500"><td class="memItemLeft" align="right" valign="top"><a id="ad8dd5f7eac307a2f12ca52ce449ad500"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>loadInstalledVersions</b> (const std::string &amp;ecu_serial, boost::optional&lt; <a class="el" href="class_uptane_1_1_target.html">Uptane::Target</a> &gt; *current_version, boost::optional&lt; <a class="el" href="class_uptane_1_1_target.html">Uptane::Target</a> &gt; *pending_version)=0</td></tr>
+<tr class="separator:ad8dd5f7eac307a2f12ca52ce449ad500"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81ee9799e966b6ae863562cbc9f6d427"><td class="memItemLeft" align="right" valign="top"><a id="a81ee9799e966b6ae863562cbc9f6d427"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>loadInstallationLog</b> (const std::string &amp;ecu_serial, std::vector&lt; <a class="el" href="class_uptane_1_1_target.html">Uptane::Target</a> &gt; *log, bool only_installed)=0</td></tr>
+<tr class="separator:a81ee9799e966b6ae863562cbc9f6d427"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6cec6607534a707885d11b1736ebc746"><td class="memItemLeft" align="right" valign="top"><a id="a6cec6607534a707885d11b1736ebc746"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>hasPendingInstall</b> ()=0</td></tr>
 <tr class="separator:a6cec6607534a707885d11b1736ebc746"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -258,12 +263,15 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>cleanUp</b> (
 <tr class="memitem:a6fea132e054302da264fe45896b60c0a"><td class="memItemLeft" align="right" valign="top"><a id="a6fea132e054302da264fe45896b60c0a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>importData</b> (const <a class="el" href="struct_import_config.html">ImportConfig</a> &amp;import_config)</td></tr>
 <tr class="separator:a6fea132e054302da264fe45896b60c0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b91d7666a7d4027f3e590655aa244f6"><td class="memItemLeft" align="right" valign="top"><a id="a0b91d7666a7d4027f3e590655aa244f6"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>loadPrimaryInstalledVersions</b> (std::vector&lt; <a class="el" href="class_uptane_1_1_target.html">Uptane::Target</a> &gt; *installed_versions, size_t *current_version, size_t *pending_version)</td></tr>
-<tr class="separator:a0b91d7666a7d4027f3e590655aa244f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7142c68c4ef8b88cc47ee779089d29cc"><td class="memItemLeft" align="right" valign="top"><a id="a7142c68c4ef8b88cc47ee779089d29cc"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>loadPrimaryInstalledVersions</b> (boost::optional&lt; <a class="el" href="class_uptane_1_1_target.html">Uptane::Target</a> &gt; *current_version, boost::optional&lt; <a class="el" href="class_uptane_1_1_target.html">Uptane::Target</a> &gt; *pending_version)</td></tr>
+<tr class="separator:a7142c68c4ef8b88cc47ee779089d29cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88dff6716d38d0c0f6dc89f63937d5b3"><td class="memItemLeft" align="right" valign="top"><a id="a88dff6716d38d0c0f6dc89f63937d5b3"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>savePrimaryInstalledVersion</b> (const <a class="el" href="class_uptane_1_1_target.html">Uptane::Target</a> &amp;target, InstalledVersionUpdateMode update_mode)</td></tr>
 <tr class="separator:a88dff6716d38d0c0f6dc89f63937d5b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b23fe274e67a65acf9c9047d6e7ac2d"><td class="memItemLeft" align="right" valign="top"><a id="a9b23fe274e67a65acf9c9047d6e7ac2d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>loadPrimaryInstallationLog</b> (std::vector&lt; <a class="el" href="class_uptane_1_1_target.html">Uptane::Target</a> &gt; *log, bool only_installed)</td></tr>
+<tr class="separator:a9b23fe274e67a65acf9c9047d6e7ac2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>

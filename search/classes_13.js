@@ -1,6 +1,7 @@
 var searchData=
 [
   ['target',['Target',['../class_uptane_1_1_target.html',1,'Uptane']]],
+  ['targetcompare',['TargetCompare',['../class_target_compare.html',1,'']]],
   ['targethashmismatch',['TargetHashMismatch',['../class_uptane_1_1_target_hash_mismatch.html',1,'Uptane']]],
   ['targetmismatch',['TargetMismatch',['../class_uptane_1_1_target_mismatch.html',1,'Uptane']]],
   ['targets',['Targets',['../class_uptane_1_1_targets.html',1,'Uptane']]],

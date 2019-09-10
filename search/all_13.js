@@ -3,6 +3,7 @@ var searchData=
   ['tail',['Tail',['../class_dequeue_buffer.html#a3954b3fc4cd5ae6d62f81a50a33c9947',1,'DequeueBuffer']]],
   ['tailspace',['TailSpace',['../class_dequeue_buffer.html#add0c438f5b2835ae3855beae88a827c2',1,'DequeueBuffer']]],
   ['target',['Target',['../class_uptane_1_1_target.html',1,'Uptane']]],
+  ['targetcompare',['TargetCompare',['../class_target_compare.html',1,'']]],
   ['targethashmismatch',['TargetHashMismatch',['../class_uptane_1_1_target_hash_mismatch.html',1,'Uptane']]],
   ['targetmismatch',['TargetMismatch',['../class_uptane_1_1_target_mismatch.html',1,'Uptane']]],
   ['targets',['Targets',['../class_uptane_1_1_targets.html',1,'Uptane']]],

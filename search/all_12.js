@@ -19,6 +19,7 @@ var searchData=
   ['setsignalhandler',['SetSignalHandler',['../class_aktualizr.html#a5af2d155c2c78f5c5a75b2b6bfc9e10d',1,'Aktualizr']]],
   ['shortcircuitsecondary',['ShortCircuitSecondary',['../class_short_circuit_secondary.html',1,'']]],
   ['size',['Size',['../class_dequeue_buffer.html#ae15c5c83bf4b53852f229f8e0ba40034',1,'DequeueBuffer']]],
+  ['slowretrievalhandler',['SlowRetrievalHandler',['../classtest__fixtures_1_1_slow_retrieval_handler.html',1,'test_fixtures']]],
   ['snapshot',['Snapshot',['../class_uptane_1_1_snapshot.html',1,'Uptane']]],
   ['socket',['Socket',['../class_socket.html',1,'']]],
   ['socketcloser',['SocketCloser',['../struct_socket_closer.html',1,'']]],
@@ -39,5 +40,6 @@ var searchData=
   ['storageexception',['StorageException',['../class_storage_exception.html',1,'']]],
   ['storagelock',['StorageLock',['../class_storage_lock.html',1,'']]],
   ['storagetargetrhandle',['StorageTargetRHandle',['../class_storage_target_r_handle.html',1,'']]],
-  ['storagetargetwhandle',['StorageTargetWHandle',['../class_storage_target_w_handle.html',1,'']]]
+  ['storagetargetwhandle',['StorageTargetWHandle',['../class_storage_target_w_handle.html',1,'']]],
+  ['subcommand',['SubCommand',['../struct_sub_command.html',1,'']]]
 ];
