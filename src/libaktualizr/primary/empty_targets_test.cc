@@ -70,7 +70,7 @@ TEST(Aktualizr, EmptyTargets) {
     EXPECT_EQ(install_result.ecu_reports[0].install_res.result_code.num_code,
               data::ResultCode::Numeric::kNeedCompletion);
 
-    aktualizr.uptane_client()->package_manager_->completeInstall();
+    aktualizr.uptane_client()->package_manager->completeInstall();
   }
   {
     UptaneTestCommon::TestAktualizr aktualizr(conf, storage, http);

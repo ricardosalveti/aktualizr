@@ -69,14 +69,13 @@ TEST(DockerAppManager, DockerApp_Fetch) {
 
   std::shared_ptr<INvStorage> storage = INvStorage::newStorage(config.storage);
   KeyManager keys(storage, config.keymanagerConfig());
-  auto http = std::make_shared<HttpClient>();
-  auto client = std_::make_unique<SotaUptaneClient>(config, storage, http);
+  auto client = std_::make_unique<SotaUptaneClient>(config, storage);
   ASSERT_TRUE(client->updateImagesMeta());
 
   std::string targets = Utils::readFile(repo / "repo/repo/targets.json");
   LOG_INFO << "Repo targets " << targets;
 
-  bool result = client->package_manager_->fetchTarget(target, *(client->uptane_fetcher), keys, progress_cb, nullptr);
+  bool result = client->package_manager->fetchTarget(target, *(client->uptane_fetcher), keys, progress_cb, nullptr);
   ASSERT_TRUE(result);
 
   auto hashes = std::vector<Uptane::Hash>{
@@ -87,7 +86,7 @@ TEST(DockerAppManager, DockerApp_Fetch) {
   Uptane::Target app_target("foo.dockerapp", Uptane::EcuMap{}, hashes, 8);
   ASSERT_TRUE(storage->checkTargetFile(app_target));
 
-  client->package_manager_->install(target);
+  client->package_manager->install(target);
   std::string content = Utils::readFile(config.pacman.docker_apps_root / "app1/docker-compose.yml");
   ASSERT_EQ("DOCKER-APP RENDER OUTPUT\nfake contents of a docker app\n", content);
 }

@@ -65,13 +65,13 @@ TEST(Aktualizr, FullOstreeUpdate) {
     result::UpdateCheck update_result = aktualizr.CheckUpdates().get();
     ASSERT_EQ(update_result.status, result::UpdateStatus::kUpdatesAvailable);
     // Verify the target has not yet been downloaded.
-    EXPECT_EQ(aktualizr.uptane_client()->package_manager_->verifyTarget(update_result.updates[0]),
+    EXPECT_EQ(aktualizr.uptane_client()->package_manager->verifyTarget(update_result.updates[0]),
               TargetStatus::kNotFound);
 
     result::Download download_result = aktualizr.Download(update_result.updates).get();
     EXPECT_EQ(download_result.status, result::DownloadStatus::kSuccess);
     // Verify the target has been downloaded.
-    EXPECT_EQ(aktualizr.uptane_client()->package_manager_->verifyTarget(update_result.updates[0]), TargetStatus::kGood);
+    EXPECT_EQ(aktualizr.uptane_client()->package_manager->verifyTarget(update_result.updates[0]), TargetStatus::kGood);
 
     result::Install install_result = aktualizr.Install(update_result.updates).get();
     EXPECT_EQ(install_result.ecu_reports.size(), 1);
@@ -92,7 +92,7 @@ TEST(Aktualizr, FullOstreeUpdate) {
     ASSERT_EQ(update_result.status, result::UpdateStatus::kNoUpdatesAvailable);
 
     // check new version
-    const auto target = aktualizr.uptane_client()->package_manager_->getCurrent();
+    const auto target = aktualizr.uptane_client()->package_manager->getCurrent();
     EXPECT_EQ(target.sha256Hash(), new_rev);
     // TODO: verify the target. It doesn't work because
     // ostree_repo_list_commit_objects_starting_with() doesn't find the commit.
@@ -103,7 +103,7 @@ TEST(Aktualizr, FullOstreeUpdate) {
     Uptane::EcuMap primary_ecu{{Uptane::EcuSerial(conf.provision.primary_ecu_serial),
                                 Uptane::HardwareIdentifier(conf.provision.primary_ecu_hardware_id)}};
     Uptane::Target target_bad("some-pkg", primary_ecu, {Uptane::Hash(Uptane::Hash::Type::kSha256, "hash-bad")}, 4, "");
-    EXPECT_EQ(aktualizr.uptane_client()->package_manager_->verifyTarget(target_bad), TargetStatus::kNotFound);
+    EXPECT_EQ(aktualizr.uptane_client()->package_manager->verifyTarget(target_bad), TargetStatus::kNotFound);
   }
 }
 
