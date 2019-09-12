@@ -59,12 +59,11 @@ static std::shared_ptr<SotaUptaneClient> liteClient(Config &config, std::shared_
   }
 
   auto http_client = std::make_shared<HttpClient>();
-  auto report_queue = std::make_shared<ReportQueue>(config, http_client);
 
   KeyManager keys(storage, config.keymanagerConfig());
   keys.copyCertsToCurl(*http_client);
 
-  auto client = std::make_shared<SotaUptaneClient>(config, storage, http_client, report_queue);
+  auto client = std::make_shared<SotaUptaneClient>(config, storage, http_client);
   finalizeIfNeeded(*storage, config.pacman);
   return client;
 }
