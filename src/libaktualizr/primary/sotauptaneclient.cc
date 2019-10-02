@@ -161,6 +161,8 @@ data::InstallationResult SotaUptaneClient::PackageInstallSetResult(const Uptane:
   data::InstallationResult result;
   Uptane::EcuSerial ecu_serial = uptane_manifest.getPrimaryEcuSerial();
   result = PackageInstall(target);
+  throw std::runtime_error("stop");
+#if 0
   if (result.result_code.num_code == data::ResultCode::Numeric::kOk) {
     // simple case: update already completed
     storage->saveInstalledVersion(ecu_serial.ToString(), target, InstalledVersionUpdateMode::kCurrent);
@@ -169,6 +171,7 @@ data::InstallationResult SotaUptaneClient::PackageInstallSetResult(const Uptane:
     storage->saveInstalledVersion(ecu_serial.ToString(), target, InstalledVersionUpdateMode::kPending);
   }
   storage->saveEcuInstallationResult(ecu_serial, result);
+#endif
   return result;
 }
 
