@@ -160,6 +160,8 @@ void SotaUptaneClient::finalizeAfterReboot() {
 data::InstallationResult SotaUptaneClient::PackageInstallSetResult(const Uptane::Target &target) {
   data::InstallationResult result;
   Uptane::EcuSerial ecu_serial = uptane_manifest.getPrimaryEcuSerial();
+  // load the target in installed versions so that it can be re-accessed later
+  storage->saveInstalledVersion(ecu_serial.ToString(), target, InstalledVersionUpdateMode::kNone);
   result = PackageInstall(target);
   throw std::runtime_error("stop");
 #if 0
